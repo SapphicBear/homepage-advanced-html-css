@@ -43,3 +43,7 @@ ul, li, section, main, header, footer {
 li {
     list-style: none;
 }
+
+body {
+    display: grid;
+}
