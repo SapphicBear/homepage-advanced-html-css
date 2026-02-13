@@ -56,14 +56,45 @@ body {
     min-height: 150vh;
 }
 header {
+    display: flex;
+    justify-content: center;
     position: relative;
     overflow: hidden;
+    align-items: center;
+
+    h1 {
+        position: absolute;
+        position-anchor: --about-me-pic;
+        z-index: 1;
+        bottom: anchor(bottom);
+        left: anchor(left);
+        padding: 1rem;
+        font-size: 28px;
+        font-weight: 700;
+        color: white;
+    }
+    .example {
+        anchor-name: --about-me-pic;
+        position: relative;
+        flex: 0 0 1;
+        height: 350px;
+        background: var(--default);
+        width: 350px;
+        align-content: center;
+        text-align: center;
+        box-shadow: var(--shadow) 0px 5px 4px;
+    }
 
     section.about-me {
+        flex: 0 0 1;
+        background: white;
+        box-shadow: var(--shadow) 0px 5px 4px;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        padding: 3rem;
+        padding: 2rem;
+        max-width: 60ch;
+        height: 280px;
     }
 }
 
