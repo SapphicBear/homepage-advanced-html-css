@@ -77,24 +77,24 @@ header {
         anchor-name: --about-me-pic;
         position: relative;
         flex: 0 0 1;
-        height: 350px;
+        height: 400px;
         background: var(--default);
-        width: 350px;
+        min-width: 400px;
         align-content: center;
         text-align: center;
         box-shadow: var(--shadow) 0px 5px 4px;
     }
 
     section.about-me {
-        flex: 0 0 1;
+        flex: 0 1 1;
         background: white;
         box-shadow: var(--shadow) 0px 5px 4px;
         display: flex;
         flex-direction: column;
         gap: 1rem;
         padding: 2rem;
-        max-width: 60ch;
-        height: 280px;
+        max-width: 120ch;
+        min-height: 280px;
     }
 }
 
@@ -110,8 +110,11 @@ div.background {
 }
 
 main {
+    border: 2px blue solid;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+
     gap: 1rem;
 
     .card-wrapper {
