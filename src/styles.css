@@ -5,7 +5,8 @@
 */
 :root {
     --shadow: rgba(38, 11, 54, 0.534);
-    --default: rgb(153, 153, 153);
+    --default: rgb(49, 53, 78);
+    --icon-color: rgb(175, 29, 102);
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -47,6 +48,22 @@ ul, li, section, main, header, footer {
 li {
     list-style: none;
 }
+a {
+    text-decoration: none;
+}
+
+i {
+    font-size: 2rem;
+    color: var(--icon-color);
+}
+div[class~="icon"] {
+    --icon-size: 2rem;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background-color: var(--icon-color);
+    mask: url("./../imgs/bluesky.svg") no-repeat center;
+    mask-size: var(--icon-size);
+}
 
 body {
     display: grid;
@@ -56,6 +73,7 @@ body {
     min-height: 150vh;
 }
 header {
+    padding: 2rem;
     display: flex;
     justify-content: center;
     position: relative;
@@ -94,15 +112,20 @@ header {
         gap: 1rem;
         padding: 2rem;
         max-width: 120ch;
-        min-height: 280px;
+        max-height: 500px;
     }
+}
+.icon-area {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
 }
 
 div.background {
-    width: 200%;
+    min-width: 2000px;
     min-height: 35vh;
     position: absolute;
-    top: -200px;
+    top: -100px;
     left: -100px;
     transform: rotate(-5deg);
     background: var(--default);
@@ -110,7 +133,6 @@ div.background {
 }
 
 main {
-    border: 2px blue solid;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -132,6 +154,11 @@ main {
 }
 
 footer {
+    padding: 2rem;
     background: var(--default);
     place-self: stretch;
+}
+
+main > h2, footer > h2 {
+    padding-left: 2rem;
 }
