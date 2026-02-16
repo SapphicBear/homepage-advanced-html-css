@@ -79,6 +79,7 @@ body {
     max-width: 100vw;
     min-height: 150vh;
 }
+
 header {
     padding: 2rem;
     display: flex;
@@ -98,19 +99,8 @@ header {
         font-weight: 700;
         color: white;
     }
-    .example {
-        anchor-name: --about-me-pic;
-        position: relative;
-        flex: 0 0 1;
-        height: 400px;
-        background: var(--default);
-        min-width: 400px;
-        align-content: center;
-        text-align: center;
-        box-shadow: var(--shadow) 0px 5px 4px;
-    }
-
-    section.about-me {
+}
+div.about-me {
         flex: 0 1 1;
         background: white;
         box-shadow: var(--shadow) 0px 5px 4px;
@@ -119,9 +109,25 @@ header {
         gap: 1rem;
         padding: 2rem;
         max-width: 120ch;
-        max-height: 500px;
+        max-height: 420px;
     }
-}
+
+section.header-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        .example {
+            anchor-name: --about-me-pic;
+            position: relative;
+            flex: 0 0 1;
+            background: var(--default);
+            min-width: 400px;
+            height: 400px;
+            align-content: center;
+            text-align: center;
+            box-shadow: var(--shadow) 0px 5px 4px;
+        }
+    }
 .icon-area {
     display: flex;
     gap: 1rem;
@@ -191,6 +197,22 @@ main > h2, footer > h2 {
     padding-left: 2rem;
 }
 
-.fart {
-    color: rgb(139, 74, 131);
+
+@media (max-width: 980px) {
+    section.header-area {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+    }
+    .about-me {
+        grid-column: 1 / -1;
+        height: 400px;
+    }
+    .example {
+        float: left;
+        grid-column: 1 / 3;
+    }
+    .about-me, .example {
+        grid-row: 1 / 2;
+    }
 }
