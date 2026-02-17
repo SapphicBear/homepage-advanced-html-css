@@ -120,7 +120,7 @@ section.header-area {
     anchor-name: --about-me-pic;
     position: relative;
     flex: 0 0 1;
-    background: var(--default);
+    background: rgb(169, 193, 238);
     min-width: 400px;
     aspect-ratio: 1;
     align-content: center;
@@ -213,7 +213,7 @@ footer {
     padding-left: 2rem;
 }
 footer > .image {
-    background: rgb(141, 116, 116);
+    background: rgb(169, 193, 238);
     width: 450px;
     height: 450px;
     align-content: center;
