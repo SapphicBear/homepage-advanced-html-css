@@ -1,0 +1,1 @@
+import"../styles.css";!function(){const o=document.querySelectorAll("section.card"),t=["#F54927","#E8BC4A","#6DC7B9","#A06DC7","#C76D9E"];o.forEach(o=>{const c=Math.floor(Math.random()*t.length);o.style.backgroundColor=t[c]})}();
